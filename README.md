@@ -87,6 +87,7 @@ código | descrição
 
 campo | tipo | obrigatório | descrição
 |---|---|:---:|---|
+id | long | sim | Identificador único do mercado
 nome| String | sim | Informa o nome do estabelecimento
 endereco | int | sim | Informa o endereço do estabelecimento 
 telefone | String | sim | Informa o telefone do estabelecimento
@@ -122,6 +123,7 @@ código | descrição
 `GET` /api/mercado/{id}
 
 ```js
+    id: 1,
     nome: 'Mercadinho Damaceno',
     endereco: {
         endereco_id: 3,
