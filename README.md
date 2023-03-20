@@ -101,6 +101,7 @@ preco_minimo | double | não | Informa o preço mínimo para a realização de u
 **Exemplo de Campo de Requisição**
 
 ```js
+    id: 1,
     nome: 'Mercadinho Damaceno',
     endereco_id: 3,
     telefone: '(11) 98765-4321',
