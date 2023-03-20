@@ -24,13 +24,13 @@ public class MercadoController {
 
     List<Mercado> mercados = new ArrayList<>();
 
-    @GetMapping("api/mercado")
+    @GetMapping("/api/mercado")
     public List<Mercado> index(){
        return mercados;
     
     }
     
-    @PostMapping("api/mercado")
+    @PostMapping("/api/mercado")
     public Mercado create(@RequestBody Mercado mercado) {
         log.info("Cadastrando mercado" + mercado);
         mercado.setId(mercados.size() + 1l);
@@ -39,7 +39,7 @@ public class MercadoController {
     }
 
 
-    @GetMapping("api/mercado/{id}")
+    @GetMapping("/api/mercado/{id}")
     public ResponseEntity<Mercado> show(@PathVariable Long id) {
         log.info("Detalhando mercado" + id);
         var mercadoEncontrado = mercados.stream().filter(d -> d.getId().equals(id)).findFirst();
@@ -50,7 +50,7 @@ public class MercadoController {
         return ResponseEntity.ok(mercadoEncontrado.get());
     }
 
-    @DeleteMapping("api/mercado/{id}")
+    @DeleteMapping("/api/mercado/{id}")
     public ResponseEntity<Mercado> destroy(@PathVariable Long id) {
         log.info("Apagando mercado" + id);
         var mercadoEncontrado = mercados.stream().filter(d -> d.getId().equals(id)).findFirst();
@@ -63,7 +63,7 @@ public class MercadoController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PutMapping("api/mercado/{id}")
+    @PutMapping("/api/mercado/{id}")
     public ResponseEntity<Mercado> update(@PathVariable Long id, @RequestBody Mercado mercado) {
         log.info("Atualizando mercado" + id);
         var mercadoEncontrado = mercados.stream().filter(d -> d.getId().equals(id)).findFirst();

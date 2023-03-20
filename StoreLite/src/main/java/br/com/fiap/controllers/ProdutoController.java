@@ -24,13 +24,13 @@ public class ProdutoController {
 
     List<Produto> produtos = new ArrayList<>();
 
-    @GetMapping("api/produto")
+    @GetMapping("/api/produto")
     public List<Produto> index(){
        return produtos;
     
     }
     
-    @PostMapping("api/produto")
+    @PostMapping("/api/produto")
     public Produto create(@RequestBody Produto produto) {
         log.info("Cadastrando produto" + produto);
         produto.setId(produtos.size() + 1l);
@@ -39,7 +39,7 @@ public class ProdutoController {
     }
 
 
-    @GetMapping("api/produto/{id}")
+    @GetMapping("/api/produto/{id}")
     public ResponseEntity<Produto> show(@PathVariable Long id) {
         log.info("Detalhando produto" + id);
         var produtoEncontrado = produtos.stream().filter(d -> d.getId().equals(id)).findFirst();
@@ -50,7 +50,7 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoEncontrado.get());
     }
 
-    @DeleteMapping("api/produto/{id}")
+    @DeleteMapping("/api/produto/{id}")
     public ResponseEntity<Produto> destroy(@PathVariable Long id) {
         log.info("Apagando produto" + id);
         var produtoEncontrado = produtos.stream().filter(d -> d.getId().equals(id)).findFirst();
@@ -63,7 +63,7 @@ public class ProdutoController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PutMapping("api/produto/{id}")
+    @PutMapping("/api/produto/{id}")
     public ResponseEntity<Produto> update(@PathVariable Long id, @RequestBody Produto produto) {
         log.info("Atualizando produto" + id);
         var produtoEncontrado = produtos.stream().filter(d -> d.getId().equals(id)).findFirst();

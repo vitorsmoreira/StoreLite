@@ -37,15 +37,15 @@ vencimento | LocalDateTime | sim | Informa quanto a data de vencimento do produt
 **Exemplo de Campo de Requisição**
 
 ```js
-    nome: 'Ámido de Milho',
-    fabricante: 'Maizena',
-    peso: 500.0,
-    volume: null,
-    categoria_id: 1,
-    preco: 10.5,
-    frete: null,
-    quantidade: 1,
-    vencimento: '2023-05-10'
+    "nome": "Ámido de Milho",
+    "fabricante": "Maizena",
+    "peso": 500.0,
+    "volume": null,
+    "categoria_id": 1,
+    "preco": 10.5,
+    "frete": null,
+    "quantidade": 1,
+    "vencimento": "2023-05-10"
 ```
 
 **Código de Resposta**
@@ -63,18 +63,18 @@ código | descrição
 `GET` /api/produto/{id}
 
 ```js
-    nome: 'Ámido de Milho',
-    fabricante: 'Maizena',
-    peso: 500.0,
-    volume: null,
-    categoria:{
-        categoria_id: 1,
-        nome: 'alimento'
+    "nome": "Ámido de Milho",
+    "fabricante": "Maizena",
+    "peso": 500.0,
+    "volume": null,
+    "categoria":{
+        "categoria_id": 1,
+        "nome": "alimento"
     }
-    preco: 10.5,
-    frete: null,
-    quantidade: 1,
-    vencimento: '2023-05-10'
+    "preco": 10.5,
+    "frete": null,
+    "quantidade": 1,
+    "vencimento": "2023-05-10"
 ```
 
 ---
@@ -101,14 +101,14 @@ preco_minimo | double | não | Informa o preço mínimo para a realização de u
 **Exemplo de Campo de Requisição**
 
 ```js
-    id: 1,
-    nome: 'Mercadinho Damaceno',
-    endereco_id: 3,
-    telefone: '(11) 98765-4321',
-    expediente_inicio: '09:00',
-    expediente_termino: '19:00',
-    cnpj: '33.254.819/0001-34',
-    preco_minimo: 10.0
+    "id": 1,
+    "nome": "Mercadinho Damaceno",
+    "endereco_id": 3,
+    "telefone": "(11) 98765-4321",
+    "expediente_inicio": "09:00",
+    "expediente_termino": "19:00",
+    "cnpj": "33.254.819/0001-34",
+    "preco_minimo": 10.0
 ```
 
 código | descrição
@@ -124,21 +124,21 @@ código | descrição
 `GET` /api/mercado/{id}
 
 ```js
-    id: 1,
-    nome: 'Mercadinho Damaceno',
-    endereco: {
-        endereco_id: 3,
-        numero: 500,
-        logradouro: 'Av. Jonas Matias',
-        bairro: 'Pq. Minotauro',
-        cidade: 'São Lorentino',
-        estado: 'Distrito Federal'
+    "id": 1,
+    "nome": "Mercadinho Damaceno",
+    "endereco": {
+        "endereco_id": 3,
+        "numero": 500,
+        "logradouro": "Av. Jonas Matias",
+        "bairro": "Pq. Minotauro",
+        "cidade": "São Lorentino",
+        "estado": "Distrito Federal"
     }
-    telefone: '(11) 98765-4321',
-    expediente_inicio: '09:00',
-    expediente_termino: '19:00',
-    cnpj: '33.254.819/0001-34',
-    preco_minimo: 10.0
+    "telefone": "(11) 98765-4321",
+    "expediente_inicio": "09:00",
+    "expediente_termino": "19:00",
+    "cnpj": "33.254.819/0001-34",
+    "preco_minimo": 10.0
 ```
 
 código | descrição
